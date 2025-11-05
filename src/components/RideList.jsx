@@ -1,30 +1,31 @@
 import { Car, MapPin, Star, Clock } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const sampleRides = [
   {
     id: 1,
-    from: 'Karachi',
-    to: 'Lahore',
-    time: 'Tomorrow • 7:00 AM',
-    price: 4500,
+    from: 'NUST H-12',
+    to: 'FAST H-11',
+    time: 'Today • 4:00 PM',
+    price: 200,
     seats: 2,
     driver: { name: 'Ahmed R.', rating: 4.8 },
   },
   {
     id: 2,
-    from: 'Islamabad',
-    to: 'Peshawar',
+    from: 'COMSATS Islamabad',
+    to: 'Air University',
     time: 'Today • 5:30 PM',
-    price: 1200,
+    price: 180,
     seats: 3,
     driver: { name: 'Hina S.', rating: 5.0 },
   },
   {
     id: 3,
-    from: 'Lahore',
-    to: 'Multan',
+    from: 'QAU',
+    to: 'IIUI',
     time: 'Fri • 9:00 AM',
-    price: 1800,
+    price: 220,
     seats: 1,
     driver: { name: 'Usman K.', rating: 4.6 },
   },
@@ -79,10 +80,10 @@ export default function RideList() {
       <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
         <div className="flex items-end justify-between mb-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Popular rides</h2>
-            <p className="text-gray-600 mt-1">Realistic fares and friendly drivers for intercity trips</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Popular campus rides</h2>
+            <p className="text-gray-600 mt-1">Twin cities student commutes with friendly fares</p>
           </div>
-          <a href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium">See all</a>
+          <Link to="/rides" className="text-blue-600 hover:text-blue-700 text-sm font-medium">See all</Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {sampleRides.map((r) => (
